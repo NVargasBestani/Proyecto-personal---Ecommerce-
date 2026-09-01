@@ -1,7 +1,9 @@
-function NavBar() {
+import "./NavBar.css";
+
+function NavBar({ nombreTienda }) {
   return (
-    <nav>
-      <h2>Mi Ecommerce</h2>
+    <nav className="navbar">
+      <h2>{nombreTienda}</h2>
     </nav>
   );
 }

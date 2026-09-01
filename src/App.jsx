@@ -1,16 +1,16 @@
 import "./App.css";
-import NavBar from "./componentes/navBar";
-import Inicio from "./componentes/inicio";
-import Productos from "./componentes/productos";
-import Footer from "./componentes/footer";
+import NavBar from "./componentes/NavBar";
+import Inicio from "./componentes/Inicio";
+import Productos from "./componentes/Productos";
+import Footer from "./componentes/Footer";
 
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar nombreTienda="mi Ecommerce" />
       <Inicio />
       <Productos />
-      <Footer />
+      <Footer anio={2026} />
     </>
   );
 }

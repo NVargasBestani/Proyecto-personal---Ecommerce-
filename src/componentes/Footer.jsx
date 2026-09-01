@@ -1,7 +1,7 @@
-function Footer() {
+function Footer({ anio }) {
   return (
     <footer>
-      <p>© 2026 Mi Ecommerce</p>
+      <p>© {anio} Mi Ecommerce</p>
     </footer>
   );
 }
