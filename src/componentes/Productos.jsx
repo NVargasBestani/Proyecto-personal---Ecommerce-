@@ -1,21 +1,18 @@
 import "./Productos.css";
+import productos from "../data/productos";
+import ProductoCard from "./productoCard";
 
-const Items = ["Remera", "Ventilador", "Lampara"];
-
-function Productos() {
-  function agregarAlCarrito(producto) {
-    console.log(`Agregaste: ${producto}`);
-  }
-
+function Productos({ agregarAlCarrito }) {
   return (
     <section>
       <h2>Productos</h2>
       <ul className="lista-productos">
-        {Items.map((producto, index) => (
-          <li className="producto-item" key={index}>
-            {producto}
-            <button onClick={() => agregarAlCarrito(producto)}>Agregar</button>
-          </li>
+        {productos.map((producto) => (
+          <ProductoCard
+            key={producto.id}
+            producto={producto}
+            agregarAlCarrito={agregarAlCarrito}
+          />
         ))}
       </ul>
     </section>
