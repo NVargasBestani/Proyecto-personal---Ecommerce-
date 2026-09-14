@@ -1,8 +1,34 @@
-.navbar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #1a1a1a;
-  color: white;
+.carrito-wrapper {
+  position: relative;
+}
+
+.carrito-boton {
+  background: none;
+  border: none;
+  color: rgb(249, 250, 248);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.carrito-desplegable {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #be71fd36;
+  border-radius: 8px;
+  padding: 1rem;
+  min-width: 200px;
+  margin-top: 0.5rem;
+  z-index: 10;
+}
+
+.carrito-desplegable ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carrito-desplegable li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #444;
 }

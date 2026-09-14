@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <NavBar nombreTienda="mi Ecommerce" cantidadCarrito={carrito.length} />
+      <NavBar nombreTienda="mi Ecommerce" carrito={carrito} />
       <Inicio />
       <Productos agregarAlCarrito={agregarAlCarrito} />
       <Footer anio={2026} />
