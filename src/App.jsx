@@ -12,9 +12,18 @@ function App() {
     setCarrito([...carrito, producto]);
   }
 
+  function quitarDelCarrito(index) {
+    const nuevoCarrito = carrito.filter((_, i) => i !== index);
+    setCarrito(nuevoCarrito);
+  }
+
   return (
     <>
-      <NavBar nombreTienda="mi Ecommerce" carrito={carrito} />
+      <NavBar
+        nombreTienda="mi Ecommerce"
+        carrito={carrito}
+        quitarDelCarrito={quitarDelCarrito}
+      />
       <Inicio />
       <Productos agregarAlCarrito={agregarAlCarrito} />
       <Footer anio={2026} />

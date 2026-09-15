@@ -1,8 +1,13 @@
 import { useState } from "react";
 import "./NavBar.css";
 
-function NavBar({ nombreTienda, carrito }) {
+function NavBar({ nombreTienda, carrito, quitarDelCarrito }) {
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
+
+  const total = carrito.reduce(
+    (acumulado, producto) => acumulado + producto.precio,
+    0,
+  );
 
   return (
     <nav className="navbar">
@@ -10,24 +15,33 @@ function NavBar({ nombreTienda, carrito }) {
 
       <div className="carrito-wrapper">
         <button
-          onClick={() => setMostrarCarrito(!mostrarCarrito)}
           className="carrito-boton"
+          onClick={() => setMostrarCarrito(!mostrarCarrito)}
         >
-          🛒 {carrito.lenght}
+          🛒 {carrito.length}
         </button>
 
         {mostrarCarrito && (
           <div className="carrito-desplegable">
-            {carrito.lenght === 0 ? (
-              <p>El carrito esta vacio</p>
+            {carrito.length === 0 ? (
+              <p>El carrito está vacío</p>
             ) : (
-              <ul>
-                {carrito.map((producto, index) => (
-                  <li key={index}>
-                    {producto.nombre} - ${producto.precio}
-                  </li>
-                ))}
-              </ul>
+              <>
+                <ul>
+                  {carrito.map((producto, index) => (
+                    <li key={index}>
+                      {producto.nombre} - ${producto.precio}
+                      <button
+                        className="quitar-boton"
+                        onClick={() => quitarDelCarrito(index)}
+                      >
+                        Quitar Producto
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+                <p className="carrito-total">Total: ${total}</p>
+              </>
             )}
           </div>
         )}
