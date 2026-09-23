@@ -1,3 +1,13 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
 .carrito-wrapper {
   position: relative;
 }
@@ -5,22 +15,24 @@
 .carrito-boton {
   background: none;
   border: none;
-  color: rgb(249, 250, 248);
+  color: var(--color-text);
   font-size: 1rem;
   cursor: pointer;
 }
 
 .carrito-desplegable {
   position: absolute;
-  color: rgba(7, 7, 7, 0.774);
+  color: var(--color-text);
   top: 100%;
   right: 0;
-  background-color: #bebdbefb;
-  border-radius: 8px;
-  padding: 1rem;
-  min-width: 200px;
-  margin-top: 0.5rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  min-width: 220px;
+  margin-top: var(--spacing-sm);
   z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .carrito-desplegable ul {
@@ -31,5 +43,5 @@
 
 .carrito-desplegable li {
   padding: 0.3rem 0;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid var(--color-border);
 }
