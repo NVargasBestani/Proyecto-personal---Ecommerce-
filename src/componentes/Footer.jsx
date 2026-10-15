@@ -1,7 +1,11 @@
+import "./Footer.css";
+
 function Footer({ anio }) {
   return (
-    <footer>
-      <p>© {anio} Mi Ecommerce</p>
+    <footer className="footer">
+      <div className="contenedor">
+        <p>© {anio} Mi Ecommerce</p>
+      </div>
     </footer>
   );
 }

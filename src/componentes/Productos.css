@@ -1,14 +1,60 @@
+.seccion-productos {
+  padding: 3rem 0;
+}
+
+.seccion-productos h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+}
+
 .lista-productos {
   display: grid;
-  grid-template-columns: repeat(autofit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax (240px, 1fr));
+  gap: var(--spacing-lg);
   list-style: none;
-  padding: 0;
 }
 
 .producto-item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.producto-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.producto-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.producto-item h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.producto-item p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.producto-item .precio {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.producto-item button {
+  margin-top: auto;
 }

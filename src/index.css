@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-  --color-bg: #39a18a7e;
-  --color-surface: #f7f7f7;
-  --color-border: #0c0606;
-  --color-text: #ef86069b;
-  --color-text-muted: #6b6b6b;
-  --color-accent: #c67b7b87;
-  --color-accent-hover: #333333;
+  --color-bg: #fffdf9;
+  --color-surface: #f7f3ee;
+  --color-border: #e8e0d5;
+  --color-text: #1c1917;
+  --color-text-muted: #78716c;
+  --color-accent: #1c1917;
+  --color-accent-hover: #44403c;
 
   --radius: 8px;
   --spacing-sm: 0.5rem;
@@ -26,4 +26,30 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.5;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.boton-principal {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2rem;
+}
+
+.boton-principal:hover {
+  background-color: var(--color-accent-hover);
 }
